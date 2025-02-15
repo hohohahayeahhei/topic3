@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* css书写顺序：浏览器执行效率更高
+        1.浮动或者display
+        2.盒子模型 margin padding border 宽度高度背景色
+        3.文字样式*/
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .top{
+            /* 宽度高度背景色 */
+            height: 40px;
+            background-color: #333;
+        }
+
+        .header{
+            width: 1226px;
+            height: 100px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+
+        .content{
+            width: 1226px;
+            height: 460px;
+            /* 背景颜色无所谓，会被两个孩子盖住 */
+            background-color: green;
+            margin: 0 auto;
+        }
+
+        .left{
+            height: 460px;
+            width: 234px;
+            background-color: #ffa500;
+            float: left;
+        }
+
+        .right{
+            height: 460px;
+            width: 992px;
+            background-color: #87ceeb;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="top"></div>
+    <div class="header">头部</div>
+    <div class="content">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>
