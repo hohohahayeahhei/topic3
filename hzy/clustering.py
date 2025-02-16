@@ -81,4 +81,3 @@ class IncrementalFaceClustering:
                     labels[sample_idx] = labels[neighbor]
                     break
         return labels
-fdsfsdfsdf
