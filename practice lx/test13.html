@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .banner{
+            position: relative;
+            margin: 0 auto;
+            width: 1226px;
+            height: 600px;
+        }
+
+        .mask{
+            left: 0;
+            bottom: 0;
+            /* 绝对定位的盒子显示模式具备行内块特点：加宽度高度默认生效，但是如果没有宽度或者没有内容，那么宽度为0 */
+            /* 如果子集和父级的宽度相同，可以写width 100% */
+            width: 1226px;
+            position: absolute;
+            height: 150px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <img src="./images/bg.jpg" alt="">
+        <div class="mask"></div>
+    </div>
+</body>
+</html>
