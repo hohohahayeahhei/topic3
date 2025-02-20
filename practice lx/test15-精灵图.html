@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            /* 盒子的尺寸得和小图的尺寸一样大 */
+            display: inline-block;
+            width:18px ;
+            height:24px ;
+            background-color: pink;
+            background-image: url(../images/taobao.png);
+            /*只要想移动背景图的位置，就添加background-position：0，0（水平方向的位置，垂直方向的位置） */
+            /* 想要向左侧移动 给负数  向上移动 给负数 */
+            background-position: -3px 0;
+        }
+
+        b{
+            display: inline-block;
+            width:25px ;
+            height:21px ;
+            background-color: green;
+            background-image: url(../images/taobao.png);
+            background-position: 0 -90px;
+        }
+    </style>
+</head>
+<body>
+<!-- 精灵图只能是bgi 不能是img -->
+<!-- 精灵图的标签都用行内标签 span，b，i -->
+ <span></span>
+
+ <b></b>
+</body>
+</html>
