@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            height: 50px;
+            /* 解决padding和margin高度一致但还是没有对齐（因为浏览器基线对齐） */
+            box-sizing: border-box;
+            /* 解决基线对齐 */
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <!-- 处理行内块和文字对齐或者行内块和行内块之间对齐，想要居中 都用vertical-align -->
+     <input type="text"><input type="button" value="搜索">
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+        <!-- 处理行内块和文字对齐或者行内块和行内块之间对齐，想要居中 都用vertical-align -->
+
+    <img src="./images/product.png" alt=""> <input type="text">
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+        }
+        input{
+            vertical-align: top;
+            /* 顶对齐，上方无缝隙 */
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <input type="text">
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            width: 400px;
+            background-color: pink;
+        }
+
+        img{
+            /* vertical-align: middle; 还有另一种方法*/
+            display: block;
+            /* 浏览器把行内和行内块标签当作文字处理，默认基线对齐，变成block就能处理 */
+
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <img src="../css/images/1738604315413.png" alt="">
+        <!-- 多撑开了一些 -->
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            width: 600px;
+            height: 600px;
+            background-color: pink;
+            line-height: 600px;
+            text-align: center;
+        }
+        img{
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <img src="../css/images/1738604315413.png" alt="">
+        <!-- 浏览器处理行内行内块都当文字处理 -->
+    </div>
+</body>
+</html>

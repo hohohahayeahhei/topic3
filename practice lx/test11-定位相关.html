@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css书写：1.定位/浮动/display； 2. 盒子模型 3.文字属性 -->
+    <!-- position：1.相对定位relative 2.绝对定位 absolute 3.固定定位：fixed -->
+    <!-- 1.占有原来的位置
+        2.仍然具有标签原有的显示特点
+        3.相对于自己原来的位置改变了位置 -->
+
+    <!-- 注意事项：1.只加position不加方向，还是在原来的位置 -->
+    <style>
+        .box{
+            position: relative;
+            left: 100px;
+            top: 200px;
+
+            right: 200px;
+            /* 这个right不生效 */
+
+            bottom: 200px;
+            /* 这个bottom不生效 */
+
+            /* ！！！！！！！！！综上：水平以left为基准，垂直以top为基准 */
+
+
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <div class="box">box</div>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            /* 绝对定位：1.先找已经定位的父级，如果有这样的父级就以这个父级作为参照物进行定位
+            2.有父级，但是父级没有定位，就以浏览器窗口为参照进行定位 */
+
+            /* 绝对定位特点：1.脱标，不占位置（类似于浮动的效果） *
+                            2.改变标签的显示模式特点（变成了行内块的特点：在一行共存，宽高生效）/
+
+            /* 父级没有定位 */
+            position: absolute;
+            /* left:50px; */
+            left: 0;
+            top: 0;
+
+
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <div class="box">box</div>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+        }
+
+        /* 父级相对定位，子集绝对定位：子绝父相 */
+        .son{
+            /* position: absolute; */
+            position: relative;
+            /* relative和absolute对子集的位置没有影响，但是一般是relative */
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+        }
+
+        .sun{
+            position: absolute;
+            /* left: 20px;
+            top: 30px; */
+            right: 20px;
+            /* 根据浏览器窗口的20px，因为虽然有父级但是父级没有定位;son加了定位之后就在son的区域里面 */
+            bottom: 50px;
+
+            width: 200px;
+            height: 200px;
+            background-color: green;
+
+            /* 绝对定位查找父级的方式：就近找有定位的父级，如果逐层查找查找不到，就以浏览器为参照来定位 */
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">
+            <div class="sun"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            /* 绝对定位的盒子不能使用左右margin auto居中 */
+            position: absolute;
+            /* margin: 0 auto; */
+            left: 50%;
+            /* 移动到参照物的50%，现在是浏览器窗口的50%，图案的最左边在中间 */
+
+            margin-left: -150px;
+            /* 看盒子宽度(盒子宽度的一半)往左走 */
+
+            top: 50%;
+            margin-top: -150px;
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            /* 绝对定位的盒子不能使用左右margin auto居中 */
+            position: absolute;
+            /* margin: 0 auto; */
+            left: 50%;
+            /* 移动到参照物的50%，现在是浏览器窗口的50%，图案的最左边在中间 */
+            /* margin-left: -150px; */
+            /* 看盒子宽度(盒子宽度的一半)往左走 */
+            top: 50%;
+            /* margin-top: -150px; */ 
+
+            /* 位移：移动自己宽度高度的一半（左右，上下） */
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
